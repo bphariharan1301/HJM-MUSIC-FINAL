@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "995012198718",
+    "project_id": "react-music-player-fd57b",
+    "storage_bucket": "react-music-player-fd57b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995012198718:android:1e16b4cce99c9fade4ac6f",
+        "android_client_info": {
+          "package_name": "com.musicplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995012198718-49f8jfl884tcrb99udh1b9dbtekb0erc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.musicplayer",
+            "certificate_hash": "bc44a71a33be43ff4ed8c03ccb5aaddf58cf4656"
+          }
+        },
+        {
+          "client_id": "995012198718-4kr2tts8eji1osb3n2kgs432eates7rr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.musicplayer",
+            "certificate_hash": "0ffcdf2d5326a51be5a81e492e1e58c15a8b07fb"
+          }
+        },
+        {
+          "client_id": "995012198718-ck4ep06b5tsqsp58r6727lakq4arqvce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZyLqR99oq9JQciz2YvP7BV3BV7vQ70TE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995012198718-ck4ep06b5tsqsp58r6727lakq4arqvce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
