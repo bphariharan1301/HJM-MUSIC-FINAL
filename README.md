@@ -1,7 +1,7 @@
 # HJM-MUSIC-FINAL
 
 
-## INSTALLATIONS
+## INSTALLATIONS GUIDE
 
 1. Clone the repository.
 2. `cd` to the project. 
