@@ -29,7 +29,7 @@ const Navigation = () => {
         <Stack.Screen name='SignUp' component={SignUp} />
         <Stack.Screen name='ConfirmEmail' component={ConfirmEmail} />
         <Stack.Screen name='ForgotPassword' component={ForgotPassword} />
-        <Stack.Screen name='NewPasswordScreen' component={NewPasswordScreen} />
+        {/* <Stack.Screen name='NewPasswordScreen' component={NewPasswordScreen} /> */}
         <Stack.Screen name='MusicPlayer' component={MusicPlayer} />
         {/* <Stack.Screen name='DashboardScreen' component={DashboardScreen} /> */}
         

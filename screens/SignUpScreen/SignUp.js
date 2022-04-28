@@ -29,22 +29,31 @@ const SignUp = () => {
     
     console.log('Password: ', password)
 
+    auth().sendPasswordResetCode
+
     auth().createUserWithEmailAndPassword(email, password).then(() => {
       console.log('User account created & signed in!')
+      const user = auth().currentUser.updateProfile({
+        displayName: name,
+      })
+      console.log('DISPLAY NAME',user.displayName)
+      navigation.navigate('ConfirmEmail');
     })
     .catch(error => {
       if (error.code === 'auth/email-already-in-use') {
         console.log('That email address is already in use!');
+        alert('That email address is already in use!');
       }
   
       if (error.code === 'auth/invalid-email') {
-        console.log('That email address is invalid!');
+        alert('That email address is invalid!');
       }
   
       console.error(error);
     });
 
-    navigation.navigate('ProfileScreen');
+    
+    // navigation.navigate('ProfileScreen');
     // navigation.navigate('Home');
     
     console.warn("onRegisterPressed")
@@ -75,7 +84,7 @@ const SignUp = () => {
           Create an account
         </Text>
 
-        {/* <CustomInput placeholder='Name' value={name} setValue={setname} /> */}
+        <CustomInput placeholder='Name' value={name} setValue={setname} />
         <CustomInput placeholder='Email' value={email} setValue={setemail} />
         <CustomInput placeholder='Password' value={password} setValue={setPassword} setSecureTextEntry/>
         <CustomInput placeholder='Confirm Password' value={passwordRepeat} setValue={setPasswordRepeat} setSecureTextEntry/>
