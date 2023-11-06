@@ -41,6 +41,7 @@ const SignIn = () => {
       console.error(error);
     });
     navigation.navigate('Home');
+    // navigation.navigate('ConfirmEmail');
 
     
   }

@@ -37,11 +37,8 @@ const HomeScreen = () => {
         <View style={styles.container} >
 
           <View style={styles.home_container}>
-            {/* <Text style={styles.title} >
-              {user.displayName}
-            </Text> */}
             <Text style={styles.title}  >
-              { user.displayName == null ? user.displayName : user.email }
+              {user.displayName}
             </Text>
             <Pressable
             onPress={onSignOutPressed}
@@ -117,29 +114,30 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderBottomColor:'#393E46',
     borderWidth: 1,
-    paddingBottom: 10,
+    paddingBottom: 20,
     paddingTop: 10,
   },
 
   title: {
-    fontSize: 24,
+    fontSize: 16,
     color: '#FFFFFF',
     textAlign: 'center',
-    paddingBottom: 10,
+    justifyContent:'center',
+    paddingBottom: 15,
+    paddingTop: 15,
   },
 
   buttoncontainer: {
-    width: '30%',
-    padding: 15,
-    marginVertical: 5,
     alignItems: 'center',
     borderRadius: 5,
     backgroundColor: '#3B71F3',
     height: '82%',
     width: '25%',
+    paddingBottom: 10,
   },
 
   text: {
+    paddingTop:10,
     fontWeight: 'bold',
     color:'white',
   },

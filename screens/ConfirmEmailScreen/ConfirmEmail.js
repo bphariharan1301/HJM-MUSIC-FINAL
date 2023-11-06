@@ -13,30 +13,48 @@ import { useNavigation } from '@react-navigation/native';
 const ConfirmEmail = () => {
 
   const [Email, setEmail] = useState('');
+  const [Code, setCode] = useState('');
   const navigation = useNavigation()
 
+  const user = auth().currentUser
 
   const { height } = useWindowDimensions()
   
   const onConfirmPressed = () => {
 
-    const user = auth().currentUser
 
-    user.sendEmailVerification().then(function (user) {
-      alert('Please check your mail!')
-      navigation.navigate('Home')
-    }).catch(function (e) {
-      console.log(e)
-    })
+    navigation.navigate('SignIn')
 
     console.warn("onConfirmPressed")
   }
 
   const onSignInPressed = () => {
+
+    navigation.navigate('SignIn')
+
     console.warn("onSignInPressed")
   }
 
+  const onSendCodePressed = () => {
+
+    user.sendEmailVerification().then(function (user) {
+      alert('Please check your mail! and click confirm once you have verified!')
+    }).catch(function (e) {
+      console.log(e)
+    })
+
+    console.warn('onResendCodePressed')
+  }
+
+
   const onResendCodePressed = () => {
+
+    user.sendEmailVerification().then(function (user) {
+      alert('Please check your mail! and click confirm once you have verified!')
+    }).catch(function (e) {
+      console.log(e)
+    })
+
     console.warn('onResendCodePressed')
   }
 
@@ -48,14 +66,19 @@ const ConfirmEmail = () => {
           Confirm Your Email
         </Text>
 
-        <CustomInput placeholder='Enter your Email' value={Email} setValue={setEmail} />
+        {/* <CustomInput placeholder='Enter your Email' value={Email} setValue={setEmail} /> */}
 
         <CustomButton text="Confirm" onPress={onConfirmPressed} />
         
         <CustomButton
+          text="Send Code"
+          onPress={onSendCodePressed}
+          type="SECONDARY"
+        />
+        <CustomButton
           text="Resend Code"
           onPress={onResendCodePressed}
-          type="SECONDARY"
+          type="TERTIARY"
         />
 
         <CustomButton
